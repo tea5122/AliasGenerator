@@ -64,10 +64,6 @@ def manipulate_text():
     text_widget.delete(1.0, tk.END)
     text_widget.insert(tk.END, manipulated_content)
 
-# Placeholder function for "About" dialog
-def about():
-    pass
-
 # Function to open GitHub profile in a web browser
 def github():
     github_url = "https://github.com/tea5122"
@@ -116,7 +112,6 @@ def main():
     settings_menu.add_checkbutton(label="Randomize", onvalue=1, offvalue=0, command=toggle_randomize)
     settings_menu.add_checkbutton(label="Numerals", onvalue=1, offvalue=0, command=toggle_numerals)
 
-    help_menu.add_command(label='About', command=about)
     help_menu.add_command(label='Github', command=github)
 
     menubar.add_cascade(label="File", menu=file_menu)
